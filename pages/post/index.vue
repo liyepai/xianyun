@@ -1,10 +1,15 @@
 <template>
-  <div>旅游攻略页面</div>
+  <div>
+
+  </div>
 </template>
 
 <script>
+import Herder from '../../components/header'
 export default {
-
+ components: {
+   Herder
+ }
 }
 </script>
 

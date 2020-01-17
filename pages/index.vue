@@ -14,7 +14,6 @@
       </el-carousel-item>
     </el-carousel>
 
-    <!-- 搜素栏 -->
     <!-- 搜索框 -->
     <div class="banner-content">
       <div class="search-bar">
@@ -24,6 +23,7 @@
             v-for="(item, index) in lanmu"
             :key="index"
             @click="dianji(index)"
+            :class="{ active: gaolian === index }"
           >
             <i>{{ item.text }}</i>
           </span>
@@ -33,7 +33,6 @@
         <el-row type="flex" align="middle" class="search-input">
           <input
             :placeholder="lanmu[gaolian].tishi"
-            v-model="searchValue"
             @keyup.enter="handleSearch"
           />
           <i class="el-icon-search" @click="handleSearch()"></i>
@@ -81,8 +80,8 @@ export default {
   methods: {
     dianji(index) {
       this.gaolian = index;
-      if(index===2){
-         this.$router.push('./air')
+      if (index === 2) {
+        this.$router.push("./air");
       }
     }
   }
