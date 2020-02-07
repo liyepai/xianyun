@@ -2,14 +2,14 @@
   <div class="block">
     <el-carousel>
       <el-carousel-item v-for="(item, index) in beijing" :key="index">
+          <!--背景图以中间为对齐方式：x轴center  y轴center  -->
         <div
           class="beijing"
           :style="
-            `background:url(${$axios.defaults.baseURL +
-              item.url}) center center no-repeat; background-size:contain contain`
+            `background:url(${$axios.defaults.baseURL +item.url}) center center no-repeat; background-size:contain contain`
           "
+          
         >
-          <!-- <img :src="item.url" alt="" /> -->
         </div>
       </el-carousel-item>
     </el-carousel>
@@ -45,7 +45,7 @@
 <script>
 export default {
   data() {
-    //
+    //这个文件相当于main入口
     return {
       beijing: [
         { url: "http://157.122.54.189:9095/assets/images/th03.jfif" },

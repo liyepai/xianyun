@@ -2,7 +2,7 @@
   <div>
     <Herder></Herder>
    
-    <nuxt />
+    <nuxt /> <!-- nuxt相当于： <router-view></router-view> -->
      <Footer></Footer>
   </div>
 </template>
@@ -22,17 +22,7 @@ export default {
 
 
 <style lang='less'>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+
 *{
   margin:0; 
   padding:0;
@@ -43,12 +33,25 @@ ul, li, ol{
 }
 a{
   text-decoration:none;
+  //继承父类颜色
   color:inherit;
 }
-a:hover{
-
-}
 em,i{
+  // 让这个字体正常  平常斜体的
   font-style: normal;
+}
+
+
+html {
+  // 所有的页面都会经过这个文件 相当于app
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
 }
 </style>
